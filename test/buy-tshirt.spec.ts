@@ -4,9 +4,6 @@ import { MenuContentPage, ProductListPage, ProductAddedModalPage,
   ShippingStepPage, OrderSummaryPage, BankPaymentPage, PaymentStepPage} from '../src/page';
 
 describe('Buy a t-shirt', () => {
-  beforeEach(() => {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
-  });
 
   const email = 'aperdomobo@gmail.com';
   const passwd = 'WorkshopProtractor';
