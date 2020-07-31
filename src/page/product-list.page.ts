@@ -1,4 +1,4 @@
-import { $, ElementFinder } from 'protractor';
+import { $, ElementFinder, browser, ExpectedConditions } from 'protractor';
 
 export class ProductListPage {
   private addToCartBtn: ElementFinder;
@@ -8,6 +8,7 @@ export class ProductListPage {
   }
 
   public async addToCart(): Promise<void> {
+    await browser.wait(ExpectedConditions.elementToBeClickable(this.addToCartBtn), 3000);
     await this.addToCartBtn.click();
   }
 }
