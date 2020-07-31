@@ -11,9 +11,9 @@ export class SignInStepPage {
     this.submitBtn = $('#SubmitLogin > span');
   }
 
-  public async performLogin(): Promise<void> {
-    await this.emailTextField.sendKeys('aperdomobo@gmail.com');
-    await this.pwdTextField.sendKeys('WorkshopProtractor');
+  public async performLogin(email, passwd): Promise<void> {
+    await this.emailTextField.sendKeys(email);
+    await this.pwdTextField.sendKeys(passwd);
     await this.submitBtn.click();
   }
 }

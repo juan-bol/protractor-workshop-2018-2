@@ -8,6 +8,9 @@ describe('Buy a t-shirt', () => {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000;
   });
 
+  const email = 'aperdomobo@gmail.com';
+  const passwd = 'WorkshopProtractor';
+
   const menuContentPage: MenuContentPage = new MenuContentPage();
   const productListPage: ProductListPage = new ProductListPage();
   const productAddedModalPage: ProductAddedModalPage = new ProductAddedModalPage();
@@ -30,7 +33,7 @@ describe('Buy a t-shirt', () => {
     await summaryStepPage.clickCheckOut();
     await(browser.sleep(3000));
 
-    await signInStepPage.performLogin();
+    await signInStepPage.performLogin(email, passwd);
     await(browser.sleep(3000));
 
     await addressStepPage.clickCheckOut();
